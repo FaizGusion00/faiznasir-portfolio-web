@@ -99,10 +99,10 @@ export default function AboutSection() {
                 working on cutting-edge projects in fintech, agriculture technology, and business automation systems.
               </p>
               
-              <p className="font-semibold text-blue-600">
+              {/* <p className="font-semibold text-blue-600">
                 Recent Achievement: Best Employee of the Year (2024) - Recognized for consistently exceeding 
                 performance expectations and contributing to significant business improvements.
-              </p>
+              </p> */}
             </div>
 
             <div className="flex flex-wrap gap-3 mt-6">

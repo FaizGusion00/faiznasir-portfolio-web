@@ -33,18 +33,18 @@ export default function ReferralSection() {
       name: "Mr. Juhairi Ijam",
       position: "CEO & Director",
       company: "CloudGarden Sdn Bhd",
-      email: "sarah.johnson@techglobal.com",
-      phone: "+1 (555) 123-4567",
+      email: "juhairi@cloudgarden.com.my",
+      phone: "(+60) 13-272 9048",
       rating: 5,
       gradient: "from-blue-600 to-cyan-600",
       delay: 0
     },
     {
-      name: "Shazril Suhaimi",
+      name: "Mr. Shazril Suhaimi",
       position: "Director",
       company: "Magiska Design Sdn Bhd",
-      email: "michael.chen@innovatex.com", 
-      phone: "+1 (555) 234-5678",
+      email: "syazril@bestari.io", 
+      phone: "(+60) 19-302 9570",
       rating: 5,
       gradient: "from-purple-600 to-pink-600",
       delay: 0.2
@@ -54,7 +54,7 @@ export default function ReferralSection() {
       position: "FSKM's Dean",
       company: "UiTM Shah Alam",
       email: "norjansalika@uitm.edu.my",
-      phone: "+60 3-5544 2000",
+      phone: "(+60) 19-347 9872",
       rating: 5,
       gradient: "from-green-600 to-teal-600",
       delay: 0.4
@@ -64,7 +64,7 @@ export default function ReferralSection() {
       position: "Head of Center",
       company: "UiTM Kampus Kuala Terengganu",
       email: "talmizie@uitm.edu.my",
-      phone: "+60 9-668 4000",
+      phone: "(+60) 9-8400 4000",
       rating: 5,
       gradient: "from-indigo-600 to-purple-600",
       delay: 0.4
@@ -74,7 +74,7 @@ export default function ReferralSection() {
       position: "Head Manager",
       company: "Magiska Design Sdn Bhd",
       email: "firman@magiska.com",
-      phone: "+60 9-668 4000",
+      phone: "(+60) 11-5595 7161",
       rating: 5,
       gradient: "from-indigo-600 to-purple-600",
       delay: 0.4
@@ -83,8 +83,8 @@ export default function ReferralSection() {
       name: "Dr. Kamalia Azma",
       position: "Senior Lecturer",
       company: "UiTM Shah Alam",
-      email: "kamalia@uitm.edu.my",
-      phone: "+60 9-668 4000",
+      email: "kamalia545@uitm.edu.my",
+      phone: "(+60) 3-5521 1222",
       rating: 5,
       gradient: "from-indigo-600 to-purple-600",
       delay: 0.4
@@ -197,14 +197,7 @@ export default function ReferralSection() {
                   </div>
                 </div>
 
-                {/* Contact Button */}
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full mt-6 px-4 py-3 bg-gradient-to-r ${referral.gradient} rounded-lg font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300`}
-                >
-                  Contact Reference
-                </motion.button>
+
               </div>
             </motion.div>
           ))}

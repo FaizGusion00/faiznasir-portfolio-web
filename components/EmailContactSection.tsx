@@ -56,32 +56,32 @@ export default function EmailContactSection() {
     {
       icon: <FaEnvelope />,
       title: "Direct Email",
-      subtitle: "Professional Inquiries",
+      subtitle: "Professional Inquiries & General Contact",
       email: "faizhiruko00@gmail.com",
-      description: "For project discussions, collaboration opportunities, and professional inquiries",
-      gradient: "from-blue-600 to-cyan-600",
+      description: "For project discussions, collaboration opportunities, and all professional inquiries. Your primary contact point for any development needs.",
+      gradient: "from-blue-600 to-indigo-600",
       delay: 0,
-      features: ["24-hour response time", "Detailed project proposals", "Professional consultation"]
+      features: ["⚡ 24-hour response time", "📋 Detailed project proposals", "💼 Professional consultation", "🔒 Confidential discussions"]
     },
     {
       icon: <FaRocket />,
       title: "Project Collaboration",
-      subtitle: "Let's Build Together",
-      email: "projects@faiznasir.dev",
-      description: "Ready to start your next big project? Let's discuss your vision and make it reality",
+      subtitle: "Let's Build Something Amazing",
+      email: "faizhiruko00@gmail.com",
+      description: "Ready to start your next big project? Let's discuss your vision, requirements, and turn your ideas into reality with cutting-edge solutions.",
       gradient: "from-purple-600 to-pink-600",
       delay: 0.2,
-      features: ["Custom solutions", "Agile development", "Quality assurance"]
+      features: ["🚀 Custom solutions", "⚙️ Agile development", "✅ Quality assurance", "📈 Scalable architecture"]
     },
     {
       icon: <FaPhoneAlt />,
       title: "Quick Consultation",
-      subtitle: "Schedule a Call",
-      email: "consultation@faiznasir.dev",
-      description: "Book a free 30-minute consultation to discuss your project requirements",
-      gradient: "from-green-600 to-teal-600",
+      subtitle: "Free Expert Advice & Technical Guidance",
+      email: "fgcompany.developer@gmail.com",
+      description: "Book a free 30-minute consultation to discuss your project requirements, get technical guidance, and explore the best solutions for your needs.",
+      gradient: "from-emerald-600 to-teal-600",
       delay: 0.4,
-      features: ["Free consultation", "Technical guidance", "Project roadmap"]
+      features: ["🆓 Free consultation", "🎯 Technical guidance", "📊 Project roadmap", "💡 Innovation insights"]
     }
   ]
 
@@ -92,10 +92,24 @@ export default function EmailContactSection() {
     { number: "5+", label: "Years Experience", icon: <FaGlobe /> }
   ]
 
-  const handleEmailClick = (email: string) => {
-    window.location.href = `mailto:${email}?subject=Project Inquiry&body=Hello Faiz,%0D%0A%0D%0AI'm interested in discussing a project with you. Here are the details:%0D%0A%0D%0AProject Type: %0D%0ABudget Range: %0D%0ATimeline: %0D%0A%0D%0ALooking forward to hearing from you!%0D%0A%0D%0ABest regards,`
-    setEmailSent(true)
-    setTimeout(() => setEmailSent(false), 3000)
+  const handleEmailClick = (email: string, title: string) => {
+    let subject = "";
+    let body = "";
+    
+    if (title === "Direct Email") {
+      subject = "Professional Inquiry - Let's Discuss Your Project";
+      body = "Hello Faiz,%0D%0A%0D%0AI hope this email finds you well. I'm reaching out regarding a potential project collaboration.%0D%0A%0D%0AProject Details:%0D%0A• Project Type: %0D%0A• Industry/Domain: %0D%0A• Budget Range: %0D%0A• Timeline: %0D%0A• Specific Requirements: %0D%0A%0D%0APlease let me know your availability for a detailed discussion.%0D%0A%0D%0ALooking forward to your response!%0D%0A%0D%0ABest regards,";
+    } else if (title === "Project Collaboration") {
+      subject = "Project Collaboration Opportunity - Let's Build Together";
+      body = "Hello Faiz,%0D%0A%0D%0AI have an exciting project idea and would love to collaborate with you!%0D%0A%0D%0AProject Vision:%0D%0A• Project Name: %0D%0A• Technology Stack Preference: %0D%0A• Target Audience: %0D%0A• Key Features Required: %0D%0A• Expected Launch Date: %0D%0A%0D%0AI believe your expertise would be perfect for this project. Would you be interested in discussing this further?%0D%0A%0D%0AExcited to hear from you!%0D%0A%0D%0ABest regards,";
+    } else if (title === "Quick Consultation") {
+      subject = "Free Consultation Request - Technical Guidance Needed";
+      body = "Hello Faiz,%0D%0A%0D%0AI would like to schedule a free 30-minute consultation to discuss my project requirements and get your expert technical guidance.%0D%0A%0D%0AConsultation Topics:%0D%0A• Project Overview: %0D%0A• Technical Challenges: %0D%0A• Technology Recommendations: %0D%0A• Project Roadmap & Timeline: %0D%0A• Budget Planning: %0D%0A%0D%0APreferred Time Slots:%0D%0A• Option 1: %0D%0A• Option 2: %0D%0A• Option 3: %0D%0A%0D%0AThank you for offering free consultations. Looking forward to our discussion!%0D%0A%0D%0ABest regards,";
+    }
+    
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${body}`;
+    setEmailSent(true);
+    setTimeout(() => setEmailSent(false), 4000);
   }
 
   return (
@@ -192,7 +206,7 @@ export default function EmailContactSection() {
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
               className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 relative overflow-hidden cursor-pointer"
-              onClick={() => handleEmailClick(option.email)}
+              onClick={() => handleEmailClick(option.email, option.title)}
             >
               {/* Gradient Background on Hover */}
               <motion.div
@@ -224,42 +238,55 @@ export default function EmailContactSection() {
                 <p className="text-gray-600 leading-relaxed mb-6">{option.description}</p>
 
                 {/* Features */}
-                <div className="space-y-2 mb-6">
+                <div className="space-y-3 mb-6">
                   {option.features.map((feature, featureIndex) => (
                     <motion.div
                       key={featureIndex}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ 
-                        opacity: hoveredCard === index ? 1 : 0.7,
+                        opacity: hoveredCard === index ? 1 : 0.8,
                         x: hoveredCard === index ? 0 : -20
                       }}
                       transition={{ duration: 0.3, delay: featureIndex * 0.1 }}
-                      className="flex items-center gap-2 text-sm text-gray-600"
+                      className="flex items-center gap-3 text-sm text-gray-700 bg-gray-50 rounded-lg p-2 group-hover:bg-white transition-colors"
                     >
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                      {feature}
+                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${option.gradient} flex-shrink-0`} />
+                      <span className="font-medium">{feature}</span>
                     </motion.div>
                   ))}
                 </div>
 
                 {/* Email Address */}
-                <div className="bg-gray-50 rounded-lg p-4 mb-6 group-hover:bg-blue-50 transition-colors">
-                  <div className="flex items-center gap-2 text-sm text-gray-600 mb-1">
-                    <FaEnvelope className="text-blue-500" />
-                    <span>Email Address</span>
+                <div className="bg-white rounded-lg p-4 mb-6 border-2 border-gray-200 group-hover:border-blue-300 transition-all duration-300 shadow-sm">
+                  <div className="flex items-center gap-2 text-sm text-gray-700 mb-2">
+                    <FaEnvelope className="text-blue-600" />
+                    <span className="font-semibold">Contact Email</span>
                   </div>
-                  <div className="font-mono text-blue-700 font-medium">{option.email}</div>
+                  <div className="font-mono text-gray-900 font-bold text-base break-all select-all cursor-pointer hover:text-blue-700 transition-colors bg-gray-50 p-2 rounded border">
+                    {option.email}
+                  </div>
+                  <div className="text-xs text-gray-600 mt-2 font-medium">Click button below to send email directly</div>
                 </div>
 
                 {/* Action Button */}
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r ${option.gradient} rounded-lg font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300`}
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className={`w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r ${option.gradient} rounded-xl font-semibold text-white shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer relative overflow-hidden group/btn`}
                 >
-                  <span>Send Email</span>
-                  <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-                </motion.button>
+                  <motion.div
+                    className="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-10 transition-opacity duration-300"
+                  />
+                  <FaEnvelope className="relative z-10 text-lg" />
+                  <span className="relative z-10">Email Me Now</span>
+                  <motion.div
+                    animate={{ x: hoveredCard === index ? 5 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="relative z-10"
+                  >
+                    <FaArrowRight />
+                  </motion.div>
+                </motion.div>
               </div>
             </motion.div>
           ))}
@@ -279,47 +306,7 @@ export default function EmailContactSection() {
           <span>Email client opened! Check your default email app.</span>
         </motion.div>
 
-        {/* Additional Contact Methods */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center"
-        >
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Prefer a Different Communication Method?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              I'm flexible and available through multiple channels to make communication as convenient as possible for you.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.a
-                href="tel:+60194596236"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-teal-600 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <FaPhoneAlt />
-                Call Now
-              </motion.a>
-              
-              <motion.a
-                href="https://linkedin.com/in/faiznasir"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <FaCalendarAlt />
-                LinkedIn Message
-              </motion.a>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   )

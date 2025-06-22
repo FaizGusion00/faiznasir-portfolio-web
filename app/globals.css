@@ -120,7 +120,7 @@ html {
 /* Focus styles */
 .focus-ring {
   @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white;
-}
+} 
 
 /* Mobile responsive styles */
 @media (min-width: 360px) {
@@ -150,5 +150,38 @@ html {
   
   .mobile-icon-lg {
     font-size: 1.5rem;
+  }
+}
+
+/* Enhanced tablet/medium screen navigation */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar-tablet {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  
+  .nav-item-tablet {
+    font-size: 0.75rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 4rem;
+  }
+  
+  .nav-container-tablet {
+    background-color: rgba(249, 250, 251, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 0.75rem;
+    padding: 0.25rem;
+    border: 1px solid rgba(229, 231, 235, 0.8);
+  }
+}
+
+/* Ultra-wide screen optimizations */
+@media (min-width: 1920px) {
+  .navbar-ultra-wide {
+    max-width: 90rem;
   }
 } 

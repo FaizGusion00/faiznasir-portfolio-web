@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaExternalLinkAlt, FaCode, FaCalendarAlt, FaMapMarkerAlt, FaRocket, FaIndustry, FaDesktop, FaCalculator } from 'react-icons/fa'
-import { SiReact, SiFlutter, SiLaravel, SiPython, SiTensorflow, SiNextdotjs, SiTailwindcss, SiCplusplus, SiC } from 'react-icons/si'
+import { FaExternalLinkAlt, FaCode, FaCalendarAlt, FaMapMarkerAlt, FaRocket, FaIndustry, FaDesktop, FaCalculator, FaUniversity, FaSearch, FaShoppingCart, FaUsers, FaChartLine, FaCloud, FaBitcoin, FaShareAlt, FaClipboardList } from 'react-icons/fa'
+import { SiReact, SiFlutter, SiLaravel, SiPython, SiTensorflow, SiNextdotjs, SiTailwindcss, SiCplusplus, SiC, SiPhp, SiMysql, SiBootstrap, SiJavascript } from 'react-icons/si'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -60,7 +60,7 @@ export default function ProjectsSection() {
       type: "Business Analytics Platform"
     },
     {
-      title: "PSBV Next Application",
+      title: "PSVB Next Application",
       subtitle: "Phongsavanh Bank HR System",
       company: "International Project - Laos",
       period: "October 2024 - April 2025",
@@ -220,6 +220,206 @@ export default function ProjectsSection() {
       gradient: "from-pink-500 to-rose-600",
       icon: <SiNextdotjs />,
       type: "Social Media Platform"
+    },
+    {
+      title: "InQKA Program Accreditation Information System (PAIS)",
+      subtitle: "University Program Accreditation Management",
+      company: "InQKA UiTM Shah Alam",
+      period: "2021 - 2022",
+      status: "Completed",
+      description: "Developed a comprehensive web-based accreditation management system for UiTM Shah Alam to streamline program accreditation processes, manage applications, panel assessors, faculties, and generate detailed reports for stakeholders.",
+      technologies: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "Bootstrap", "Chart.js"],
+      features: [
+        "Application management with status tracking",
+        "Internal and external panel management",
+        "Faculty and campus information management",
+        "Comprehensive reporting system for stakeholders",
+        "Document submission and review workflows",
+        "Interactive video tutorial system"
+      ],
+      gradient: "from-blue-600 to-indigo-600",
+      icon: <FaUniversity />,
+      type: "Educational Management System"
+    },
+    {
+      title: "InQKA Query Management System", 
+      subtitle: "University Query Processing Platform",
+      company: "InQKA UiTM Shah Alam",
+      period: "2022 - 2023",
+      status: "Completed",
+      description: "Built a sophisticated query management system for handling university queries and requests, providing efficient tracking, processing, and resolution workflows for academic and administrative inquiries.",
+      technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap", "AJAX", "PDF Generation"],
+      features: [
+        "Advanced query categorization and routing",
+        "Real-time query status tracking and notifications",
+        "Multi-department workflow management",
+        "Automated response templates and scheduling",
+        "Performance analytics and reporting dashboard",
+        "Integration with university authentication systems"
+      ],
+      gradient: "from-purple-600 to-blue-600",
+      icon: <FaSearch />,
+      type: "Query Management Platform"
+    },
+    {
+      title: "iProc: Government Procurement Management System",
+      subtitle: "Malaysia Government Procurement Platform",
+      company: "Jabatan Akauntan Negara Malaysia",
+      period: "2023 - 2024",
+      status: "Completed",
+      description: "Developed iProc, a comprehensive procurement management system specifically for the Procurement Unit, Management Accounting Development Division, Malaysia's National Accountant Department, featuring advanced security and access control.",
+      technologies: ["PHP", "MySQL", "Laravel", "Vue.js", "Government APIs", "Security Frameworks"],
+      features: [
+        "Secure government procurement process management",
+        "Advanced role-based access control and authentication",
+        "Vendor management and qualification system",
+        "Tender and bidding process automation",
+        "Compliance tracking and audit trails",
+        "Integration with national procurement databases"
+      ],
+      gradient: "from-red-600 to-orange-600",
+      icon: <FaShoppingCart />,
+      type: "Government Procurement System"
+    },
+    {
+      title: "KPSU Management System",
+      subtitle: "Student Organization Management Platform",
+      company: "Student Organization Management",
+      period: "2023 - 2024", 
+      status: "Completed",
+      description: "Built a comprehensive web-based management system for KPSU (Student Organization) using PHP and MySQL to streamline student activities, membership management, and organizational operations.",
+      technologies: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
+      features: [
+        "Student membership registration and management",
+        "Event planning and activity scheduling",
+        "Financial tracking and budget management",
+        "Communication and notification system",
+        "Meeting minutes and documentation management",
+        "Performance reports and analytics dashboard"
+      ],
+      gradient: "from-green-600 to-teal-600",
+      icon: <FaUsers />,
+      type: "Student Management System"
+    },
+    {
+      title: "MySuri: Beauty Salon & Spa Booking System",
+      subtitle: "Multi-Platform Beauty Service Platform",
+      company: "Beauty & Wellness Industry",
+      period: "2024 - Present",
+      status: "Active Development",
+      description: "Developed MySuri, a comprehensive multi-platform beauty salon and spa booking management system with Laravel backend and Flutter mobile apps, enabling customers to book appointments while providing salon owners with complete business management tools.",
+      technologies: ["Laravel", "Flutter", "MySQL", "Stripe", "PayPal", "Firebase", "GPS Integration"],
+      features: [
+        "Customer booking app with salon discovery and GPS",
+        "Salon owner management app with business analytics", 
+        "Admin web panel for system management",
+        "Multiple payment gateways integration",
+        "Real-time chat and notification system",
+        "Home service and in-salon booking options"
+      ],
+      gradient: "from-pink-600 to-purple-600",
+      icon: <FaUsers />,
+      type: "Beauty & Wellness Platform"
+    },
+    {
+      title: "FGAdmin: Advanced Administrative Dashboard",
+      subtitle: "Enterprise Admin Management Platform",
+      company: "FGCompany Official",
+      period: "2024 - Present",
+      status: "Active Development", 
+      description: "Created FGAdmin, a powerful administrative dashboard and management platform designed for enterprise-level operations, featuring advanced user management, system monitoring, and comprehensive analytics.",
+      technologies: ["React.js", "Node.js", "PostgreSQL", "Redis", "Docker", "Microservices"],
+      features: [
+        "Advanced user and role management system",
+        "Real-time system monitoring and alerts",
+        "Comprehensive analytics and reporting tools",
+        "API management and documentation",
+        "Security audit logs and compliance tracking",
+        "Modular plugin architecture for extensibility"
+      ],
+      gradient: "from-indigo-600 to-purple-600",
+      icon: <FaChartLine />,
+      type: "Administrative Platform"
+    },
+    {
+      title: "Weather Web Application",
+      subtitle: "Real-Time Weather Information Platform",
+      company: "Weather Intelligence",
+      period: "2023 - 2024",
+      status: "Completed",
+      description: "Built a comprehensive weather web application providing real-time weather information, forecasts, and meteorological data with interactive maps and detailed analytics for weather tracking.",
+      technologies: ["JavaScript", "HTML5", "CSS3", "Weather APIs", "Chart.js", "Geolocation"],
+      features: [
+        "Real-time weather data and forecasts",
+        "Interactive weather maps and visualizations",
+        "Location-based weather tracking with GPS",
+        "Historical weather data and trends analysis",
+        "Weather alerts and notification system",
+        "Mobile-responsive design for all devices"
+      ],
+      gradient: "from-cyan-500 to-blue-500",
+      icon: <FaCloud />,
+      type: "Weather Information System"
+    },
+    {
+      title: "FG-EA Trading Platform v1.0",
+      subtitle: "Automated Trading & Investment Platform",
+      company: "FGCompany Trading Solutions",
+      period: "2024 - Present",
+      status: "Active Development",
+      description: "Developed FG-EA Trading v1.0, an advanced automated trading platform featuring algorithmic trading strategies, real-time market analysis, and comprehensive portfolio management for forex and cryptocurrency markets.",
+      technologies: ["Python", "JavaScript", "Trading APIs", "Machine Learning", "WebSocket", "Chart.js"],
+      features: [
+        "Automated trading algorithms and expert advisors",
+        "Real-time market data analysis and visualization",
+        "Risk management and portfolio optimization",
+        "Multi-market support (Forex, Crypto, Stocks)",
+        "Advanced charting and technical analysis tools",
+        "Backtesting and strategy performance analytics"
+      ],
+      gradient: "from-yellow-500 to-green-500", 
+      icon: <FaBitcoin />,
+      type: "Trading & Investment Platform"
+    },
+    {
+      title: "FGSocialSphere: Social Media Platform",
+      subtitle: "Next-Generation Social Networking Platform",
+      company: "FGCompany Social Technologies",
+      period: "2024 - Present",
+      status: "Active Development",
+      description: "Created FGSocialSphere, a modern social media platform with advanced features for content sharing, community building, and social interaction, incorporating AI-powered content curation and engagement analytics.",
+      technologies: ["React.js", "Node.js", "MongoDB", "Socket.io", "AI/ML", "Cloud Storage"],
+      features: [
+        "Advanced social networking and community features",
+        "AI-powered content recommendation engine",
+        "Real-time messaging and video calling",
+        "Content creation tools and media sharing",
+        "Social analytics and engagement tracking",
+        "Privacy controls and security features"
+      ],
+      gradient: "from-blue-500 to-purple-500",
+      icon: <FaShareAlt />,
+      type: "Social Media Platform"
+    },
+    {
+      title: "YN Tracker System",
+      subtitle: "Advanced Tracking & Monitoring Platform",
+      company: "Tracking Solutions",
+      period: "2024 - Present", 
+      status: "Active Development",
+      description: "Developed YN Tracker System, a comprehensive tracking and monitoring platform designed for efficient resource management, real-time tracking, and detailed analytics across various tracking scenarios.",
+      technologies: ["PHP", "MySQL", "JavaScript", "GPS Integration", "REST API", "Chart.js"],
+      features: [
+        "Real-time GPS tracking and location monitoring",
+        "Resource allocation and management system",
+        "Comprehensive reporting and analytics dashboard",
+        "Multi-device compatibility and mobile access",
+        "Alert system for critical events and notifications",
+        "Historical data analysis and trend tracking"
+      ],
+      gradient: "from-orange-500 to-red-500",
+      icon: <FaClipboardList />,
+      type: "Tracking & Monitoring System"
     }
   ]
 

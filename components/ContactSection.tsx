@@ -4,7 +4,8 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { 
   FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, 
-  FaPaperPlane, FaUser, FaComment, FaRocket, FaDownload 
+  FaPaperPlane, FaUser, FaComment, FaRocket, FaDownload, 
+  FaInstagram, FaInstagramSquare
 } from 'react-icons/fa'
 
 const fadeInUp = {
@@ -69,9 +70,9 @@ export default function ContactSection() {
 
   const socialLinks = [
     {
-      icon: <FaLinkedin />,
-      name: "LinkedIn",
-      link: "https://linkedin.com/in/faiznasir",
+      icon: <FaInstagram />,
+      name: "Instagram",
+      link: "https://instagram.com/faiznasir00",
       color: "hover:text-blue-600"
     },
     {

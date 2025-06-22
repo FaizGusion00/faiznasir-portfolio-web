@@ -86,8 +86,8 @@ export default function Portfolio() {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-xl border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-14 sm:h-16 lg:h-18">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-14 sm:h-16 md:h-16 lg:h-18">
             {/* Logo/Brand */}
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
@@ -105,8 +105,8 @@ export default function Portfolio() {
               </div>
             </motion.div>
             
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1 bg-gray-50 rounded-2xl p-1.5 shadow-inner border border-gray-200">
+            {/* Desktop & Tablet Navigation */}
+            <div className="hidden md:flex items-center space-x-0.5 lg:space-x-1 bg-gray-50 rounded-xl lg:rounded-2xl p-1 lg:p-1.5 shadow-inner border border-gray-200">
               {[
                 { id: 'hero', label: 'Home', icon: '🏠' },
                 { id: 'about', label: 'About', icon: '👨‍💻' },
@@ -122,21 +122,21 @@ export default function Portfolio() {
                   href={`#${item.id}`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`relative px-3 lg:px-4 py-2 lg:py-2.5 rounded-xl text-xs lg:text-sm font-semibold transition-all duration-300 whitespace-nowrap ${
+                  className={`relative px-1.5 md:px-2 lg:px-3 xl:px-4 py-1.5 md:py-2 lg:py-2.5 rounded-lg lg:rounded-xl text-xs lg:text-sm font-semibold transition-all duration-300 whitespace-nowrap ${
                     activeSection === item.id
                       ? 'text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg'
                       : 'text-gray-600 hover:text-gray-800 hover:bg-white hover:shadow-md'
                   }`}
                 >
-                  <span className="flex items-center gap-1.5 lg:gap-2">
-                    <span className="text-xs">{item.icon}</span>
-                    <span className="hidden xl:inline">{item.label}</span>
-                    <span className="xl:hidden">{item.label.split(' ')[0]}</span>
+                  <span className="flex items-center gap-1 lg:gap-1.5 xl:gap-2">
+                    <span className="text-xs lg:text-sm">{item.icon}</span>
+                    <span className="hidden lg:inline">{item.label}</span>
+                    <span className="lg:hidden text-xs md:text-xs">{item.label.length > 7 ? item.label.substring(0, 4) : item.label}</span>
                   </span>
                   {activeSection === item.id && (
                     <motion.div
                       layoutId="activeSection"
-                      className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl -z-10"
+                      className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg lg:rounded-xl -z-10"
                       initial={false}
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
@@ -163,7 +163,7 @@ export default function Portfolio() {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="lg:hidden p-2 rounded-lg bg-gray-100 text-gray-600 hover:text-gray-800 hover:bg-gray-200 transition-all duration-300 border border-gray-200 shadow-md"
+                className="md:hidden p-2 rounded-lg bg-gray-100 text-gray-600 hover:text-gray-800 hover:bg-gray-200 transition-all duration-300 border border-gray-200 shadow-md"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path 
@@ -186,7 +186,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-2xl border-t border-gray-100 mx-2 mt-1 rounded-2xl overflow-hidden"
+              className="md:hidden absolute top-full left-0 right-0 bg-white shadow-2xl border-t border-gray-100 mx-2 mt-1 rounded-2xl overflow-hidden"
             >
               <div className="p-4">
                 {/* Mobile Navigation Grid */}
@@ -236,7 +236,7 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center pt-14 sm:pt-16">
+      <section id="hero" className="min-h-screen flex items-center justify-center pt-14 sm:pt-16 md:pt-16 lg:pt-18">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial="initial"
@@ -311,9 +311,9 @@ export default function Portfolio() {
               <a href="mailto:faizhiruko00@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors text-2xl">
                 <FaEnvelope />
               </a>
-              <a href="https://linkedin.com/in/faiznasir" className="text-gray-600 hover:text-blue-600 transition-colors text-2xl">
+              {/* <a href="https://linkedin.com/in/faiznasir" className="text-gray-600 hover:text-blue-600 transition-colors text-2xl">
                 <FaLinkedin />
-              </a>
+              </a> */}
               <a href="https://github.com/FaizGusion00" className="text-gray-600 hover:text-blue-600 transition-colors text-2xl">
                 <FaGithub />
               </a>
