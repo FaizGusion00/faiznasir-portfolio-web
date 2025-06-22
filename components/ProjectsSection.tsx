@@ -362,12 +362,12 @@ export default function ProjectsSection() {
       type: "Weather Information System"
     },
     {
-      title: "FG-EA Trading Platform v1.0",
+      title: "FG-EA Trading Platform",
       subtitle: "Automated Trading & Investment Platform",
       company: "FGCompany Trading Solutions",
       period: "2024 - Present",
       status: "Active Development",
-      description: "Developed FG-EA Trading v1.0, an advanced automated trading platform featuring algorithmic trading strategies, real-time market analysis, and comprehensive portfolio management for forex and cryptocurrency markets.",
+      description: "Developed FG-EA Trading, an advanced automated trading platform featuring algorithmic trading strategies, real-time market analysis, and comprehensive portfolio management for forex and cryptocurrency markets.",
       technologies: ["Python", "JavaScript", "Trading APIs", "Machine Learning", "WebSocket", "Chart.js"],
       features: [
         "Automated trading algorithms and expert advisors",
