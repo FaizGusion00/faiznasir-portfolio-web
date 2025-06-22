@@ -78,6 +78,16 @@ export default function ReferralSection() {
       rating: 5,
       gradient: "from-indigo-600 to-purple-600",
       delay: 0.4
+    },
+    {
+      name: "Dr. Kamalia Azma",
+      position: "Senior Lecturer",
+      company: "UiTM Shah Alam",
+      email: "kamalia@uitm.edu.my",
+      phone: "+60 9-668 4000",
+      rating: 5,
+      gradient: "from-indigo-600 to-purple-600",
+      delay: 0.4
     }
   ]
 
