@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaUserTie, FaEnvelope, FaPhone, FaBuilding, FaQuoteLeft, FaStar, FaLinkedin } from 'react-icons/fa'
+import { FaUserTie, FaEnvelope, FaPhone, FaBuilding, FaStar, FaLinkedin } from 'react-icons/fa'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -35,7 +35,6 @@ export default function ReferralSection() {
       company: "CloudGarden Sdn Bhd",
       email: "sarah.johnson@techglobal.com",
       phone: "+1 (555) 123-4567",
-      testimonial: "Faiz is an exceptional developer with remarkable problem-solving skills. His ability to deliver complex projects on time while maintaining high code quality is truly impressive.",
       rating: 5,
       gradient: "from-blue-600 to-cyan-600",
       delay: 0
@@ -46,7 +45,6 @@ export default function ReferralSection() {
       company: "Magiska Design Sdn Bhd",
       email: "michael.chen@innovatex.com", 
       phone: "+1 (555) 234-5678",
-      testimonial: "Working with Faiz has been a game-changer for our development team. His expertise in full-stack development and AI integration helped us achieve breakthrough results.",
       rating: 5,
       gradient: "from-purple-600 to-pink-600",
       delay: 0.2
@@ -57,7 +55,6 @@ export default function ReferralSection() {
       company: "UiTM Shah Alam",
       email: "norjansalika@uitm.edu.my",
       phone: "+60 3-5544 2000",
-      testimonial: "Faiz demonstrated exceptional academic excellence and research capabilities throughout his studies. His analytical thinking, dedication to learning, and ability to bridge theoretical concepts with practical applications make him a standout student and researcher.",
       rating: 5,
       gradient: "from-green-600 to-teal-600",
       delay: 0.4
@@ -68,7 +65,6 @@ export default function ReferralSection() {
       company: "UiTM Kampus Kuala Terengganu",
       email: "talmizie@uitm.edu.my",
       phone: "+60 9-668 4000",
-      testimonial: "As an educator, I've observed Faiz's remarkable intellectual curiosity and commitment to academic excellence. His research-oriented mindset, strong problem-solving abilities, and leadership in academic projects reflect his potential for significant contributions to the field of information technology.",
       rating: 5,
       gradient: "from-indigo-600 to-purple-600",
       delay: 0.4
@@ -79,7 +75,6 @@ export default function ReferralSection() {
       company: "Magiska Design Sdn Bhd",
       email: "firman@magiska.com",
       phone: "+60 9-668 4000",
-      testimonial: "Faiz is a dedicated and hardworking employee who consistently delivers high-quality work. His attention to detail and ability to work independently make him a valuable asset to our team.",
       rating: 5,
       gradient: "from-indigo-600 to-purple-600",
       delay: 0.4
@@ -173,16 +168,10 @@ export default function ReferralSection() {
                   ))}
                 </div>
 
-                {/* Testimonial */}
-                <div className="mb-6">
-                  <FaQuoteLeft className="text-gray-400 mb-3 text-lg" />
-                  <p className="text-gray-300 leading-relaxed text-sm italic">
-                    "{referral.testimonial}"
-                  </p>
-                </div>
+
 
                 {/* Contact Information */}
-                <div className="space-y-3 pt-4 border-t border-white/20">
+                <div className="space-y-3 pt-6 border-t border-white/20">
                   <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
                     <FaEnvelope className="text-blue-400 flex-shrink-0" />
                     <a href={`mailto:${referral.email}`} className="text-sm truncate hover:underline">

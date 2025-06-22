@@ -41,6 +41,24 @@ export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('hero')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // Add function to handle resume download for mobile
+  const handleResumeDownload = () => {
+    // Create a temporary link element for download
+    const link = document.createElement('a')
+    link.href = '/assets/resume.pdf'
+    link.download = 'Muhammad_Faiz_Nasir_Resume.pdf'
+    link.target = '_blank'
+    link.rel = 'noopener noreferrer'
+    
+    // Trigger the download
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    
+    // Close mobile menu if open
+    setIsMenuOpen(false)
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['hero', 'about', 'expertise', 'projects', 'achievements', 'education', 'github', 'referrals', 'email-contact', 'contact']
@@ -68,22 +86,22 @@ export default function Portfolio() {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-xl border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
-          <div className="flex justify-between items-center h-16 lg:h-18">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-14 sm:h-16 lg:h-18">
             {/* Logo/Brand */}
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-2 lg:space-x-3"
             >
-              <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg lg:rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-sm lg:text-lg">FN</span>
+              <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg lg:rounded-xl flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-xs sm:text-sm lg:text-lg">FN</span>
               </div>
-              <div className="hidden sm:block">
-                <h1 className="text-lg lg:text-xl font-bold text-gray-800">
+              <div className="hidden xs:block">
+                <h1 className="text-sm sm:text-lg lg:text-xl font-bold text-gray-800">
                   Faiz Nasir
                 </h1>
-                <p className="text-xs text-gray-500 font-medium">Full-Stack Developer</p>
+                <p className="text-xs text-gray-500 font-medium hidden sm:block">Full-Stack Developer</p>
               </div>
             </motion.div>
             
@@ -129,26 +147,25 @@ export default function Portfolio() {
 
             {/* Action Buttons */}
             <div className="flex items-center space-x-2 lg:space-x-3">
-              {/* Resume Download Button */}
-              <motion.a
-                href="/assets/resume.pdf"
-                download="Muhammad_Faiz_Nasir_Resume.pdf"
+              {/* Resume Download Button - Desktop */}
+              <motion.button
+                onClick={handleResumeDownload}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="hidden sm:flex items-center gap-1.5 lg:gap-2 px-3 lg:px-4 py-2 lg:py-2.5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-lg lg:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                className="hidden sm:flex items-center gap-1.5 lg:gap-2 px-2 sm:px-3 lg:px-4 py-2 lg:py-2.5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-lg lg:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <FaDownload className="text-xs lg:text-sm" />
                 <span className="text-xs lg:text-sm">Resume</span>
-              </motion.a>
+              </motion.button>
 
               {/* Mobile menu button */}
               <motion.button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="lg:hidden p-2 lg:p-3 rounded-lg lg:rounded-xl bg-gray-100 text-gray-600 hover:text-gray-800 hover:bg-gray-200 transition-all duration-300 border border-gray-200 shadow-md"
+                className="lg:hidden p-2 rounded-lg bg-gray-100 text-gray-600 hover:text-gray-800 hover:bg-gray-200 transition-all duration-300 border border-gray-200 shadow-md"
               >
-                <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path 
                     strokeLinecap="round" 
                     strokeLinejoin="round" 
@@ -169,10 +186,11 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-2xl border-t border-gray-100 mx-2 sm:mx-4 mt-1 rounded-2xl overflow-hidden"
+              className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-2xl border-t border-gray-100 mx-2 mt-1 rounded-2xl overflow-hidden"
             >
-              <div className="p-4 sm:p-6">
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+              <div className="p-4">
+                {/* Mobile Navigation Grid */}
+                <div className="grid grid-cols-2 gap-2 mb-4">
                   {[
                     { id: 'hero', label: 'Home', icon: '🏠' },
                     { id: 'about', label: 'About', icon: '👨‍💻' },
@@ -189,30 +207,28 @@ export default function Portfolio() {
                       onClick={() => setIsMenuOpen(false)}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className={`flex flex-col items-center p-3 sm:p-4 rounded-xl text-center transition-all duration-300 ${
+                      className={`flex flex-col items-center p-3 rounded-xl text-center transition-all duration-300 ${
                         activeSection === item.id
                           ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                           : 'bg-gray-50 text-gray-600 hover:bg-gray-100 hover:text-gray-800 border border-gray-200'
                       }`}
                     >
-                      <span className="text-lg sm:text-2xl mb-1">{item.icon}</span>
-                      <span className="text-xs sm:text-sm font-semibold">{item.label}</span>
+                      <span className="text-xl mb-1">{item.icon}</span>
+                      <span className="text-xs font-semibold">{item.label}</span>
                     </motion.a>
                   ))}
                 </div>
                 
                 {/* Mobile Resume Download */}
-                <motion.a
-                  href="/assets/resume.pdf"
-                  download="Muhammad_Faiz_Nasir_Resume.pdf"
-                  onClick={() => setIsMenuOpen(false)}
+                <motion.button
+                  onClick={handleResumeDownload}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex items-center justify-center gap-3 w-full p-3 sm:p-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="flex items-center justify-center gap-3 w-full p-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <FaDownload className="text-sm sm:text-lg" />
-                  <span className="text-sm sm:text-base">Download Resume</span>
-                </motion.a>
+                  <FaDownload className="text-sm" />
+                  <span className="text-sm">Download Resume</span>
+                </motion.button>
               </div>
             </motion.div>
           )}
@@ -220,7 +236,7 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center pt-16">
+      <section id="hero" className="min-h-screen flex items-center justify-center pt-14 sm:pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial="initial"
@@ -298,7 +314,7 @@ export default function Portfolio() {
               <a href="https://linkedin.com/in/faiznasir" className="text-gray-600 hover:text-blue-600 transition-colors text-2xl">
                 <FaLinkedin />
               </a>
-              <a href="https://github.com/faiznasir" className="text-gray-600 hover:text-blue-600 transition-colors text-2xl">
+              <a href="https://github.com/FaizGusion00" className="text-gray-600 hover:text-blue-600 transition-colors text-2xl">
                 <FaGithub />
               </a>
             </motion.div>

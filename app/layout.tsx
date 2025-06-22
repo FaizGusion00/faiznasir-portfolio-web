@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Muhammad Faiz Bin Nasir - Full-Stack Developer Portfolio',
+  title: 'Faiz Nasir',
   description: 'Professional portfolio of Muhammad Faiz Bin Nasir - Full-Stack Web/App Developer, Software Engineer, Graphics Designer, UI/UX Designer, and IT Specialist based in Malaysia.',
   keywords: ['Full-Stack Developer', 'Software Engineer', 'Web Developer', 'App Developer', 'UI/UX Designer', 'Malaysia', 'Portfolio'],
   authors: [{ name: 'Muhammad Faiz Bin Nasir' }],
@@ -41,6 +41,11 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
+    shortcut: '/favicon.svg',
   },
 }
 

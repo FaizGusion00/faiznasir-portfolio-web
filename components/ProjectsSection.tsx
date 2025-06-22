@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaExternalLinkAlt, FaCode, FaCalendarAlt, FaMapMarkerAlt, FaRocket, FaIndustry } from 'react-icons/fa'
-import { SiReact, SiFlutter, SiLaravel, SiPython, SiTensorflow, SiNextdotjs, SiTailwindcss } from 'react-icons/si'
+import { FaExternalLinkAlt, FaCode, FaCalendarAlt, FaMapMarkerAlt, FaRocket, FaIndustry, FaDesktop, FaCalculator } from 'react-icons/fa'
+import { SiReact, SiFlutter, SiLaravel, SiPython, SiTensorflow, SiNextdotjs, SiTailwindcss, SiCplusplus, SiC } from 'react-icons/si'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -19,6 +19,46 @@ const staggerContainer = {
 
 export default function ProjectsSection() {
   const projects = [
+    {
+      title: "FG-OS: Advanced Cross-Platform Operating System",
+      subtitle: "Modern OS with Linux & Windows Compatibility",
+      company: "FGCompany Official - Open Source",
+      period: "2024 - Present",
+      status: "Active Development",
+      description: "Developed FG-OS, a modern, minimalist operating system with professional gradient UI/UX design, featuring cross-platform application compatibility to execute both Linux and Windows applications seamlessly while maintaining superior user experience and security.",
+      technologies: ["C/C++", "Assembly x86_64", "Rust", "CMake", "OpenGL", "Linux Kernel", "Windows Compatibility"],
+      features: [
+        "Cross-platform application compatibility (Linux & Windows)",
+        "Modern gradient UI with professional design aesthetics",
+        "Advanced security framework and memory management",
+        "Custom bootloader and kernel architecture design",
+        "Hardware abstraction layer and device drivers framework",
+        "Real-time performance optimization and system services"
+      ],
+      gradient: "from-purple-600 to-blue-600",
+      icon: <FaDesktop />,
+      type: "Operating System"
+    },
+    {
+      title: "BizCount: Advanced Business Analytics Platform",
+      subtitle: "Comprehensive Business Management Solution",
+      company: "Business Intelligence & Analytics",
+      period: "2024 - Present", 
+      status: "Active Development",
+      description: "Built BizCount, a comprehensive business analytics and management platform featuring real-time data processing, advanced reporting systems, inventory management, and intelligent business insights using modern web technologies and AI-powered analytics.",
+      technologies: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Chart.js", "AI Analytics", "REST API"],
+      features: [
+        "Real-time business analytics and reporting dashboard",
+        "Advanced inventory and resource management system",
+        "AI-powered business insights and predictive analytics",
+        "Multi-user role management and access control",
+        "Automated financial reporting and expense tracking",
+        "Integration with multiple business platforms and APIs"
+      ],
+      gradient: "from-green-600 to-emerald-600",
+      icon: <FaCalculator />,
+      type: "Business Analytics Platform"
+    },
     {
       title: "PSBV Next Application",
       subtitle: "Phongsavanh Bank HR System",
@@ -289,6 +329,8 @@ export default function ProjectsSection() {
                       ))}
                     </div>
                   </div>
+
+
 
                   <div className="pt-4 border-t border-gray-200">
                     <div className="text-center">

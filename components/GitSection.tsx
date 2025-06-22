@@ -84,7 +84,7 @@ export default function GitSection() {
 
             <div className="text-center">
               <a
-                href="https://github.com/faiznasir"
+                href="https://github.com/FaizGusion00"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"

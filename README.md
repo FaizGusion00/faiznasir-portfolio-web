@@ -15,7 +15,7 @@
 - **Phone**: +60-19 459 6236
 - **Location**: Kuala Langat, Selangor, Malaysia
 - **LinkedIn**: [linkedin.com/in/faiznasir](https://linkedin.com/in/faiznasir)
-- **GitHub**: [github.com/faiznasir](https://github.com/faiznasir)
+- **GitHub**: [github.com/faizgusion00](https://github.com/FaizGusion00)
 
 ## 🏆 Highlights
 

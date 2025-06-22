@@ -77,7 +77,7 @@ export default function ContactSection() {
     {
       icon: <FaGithub />,
       name: "GitHub", 
-      link: "https://github.com/faiznasir",
+      link: "https://github.com/FaizGusion00",
       color: "hover:text-gray-800"
     }
   ]
@@ -166,7 +166,19 @@ export default function ContactSection() {
 
             {/* Download Resume */}
             <motion.div variants={fadeInUp} className="pt-6">
-              <button className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg font-semibold hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <button 
+                onClick={() => {
+                  const link = document.createElement('a')
+                  link.href = '/assets/resume.pdf'
+                  link.download = 'Muhammad_Faiz_Nasir_Resume.pdf'
+                  link.target = '_blank'
+                  link.rel = 'noopener noreferrer'
+                  document.body.appendChild(link)
+                  link.click()
+                  document.body.removeChild(link)
+                }}
+                className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg font-semibold hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
                 <FaDownload />
                 Download Resume
               </button>
