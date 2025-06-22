@@ -131,8 +131,8 @@ export default function AchievementsSection() {
       description: "Top performance in technical assessments"
     },
     {
-      title: "Most Promising Developer (Magiska, 2025)",
-      organization: "Magiska",
+      title: "Most Promising Developer (Bestari, 2025)",
+      organization: "Bestari.io Sdn Bhd",
       description: "Recognition for development potential and skills"
     }
   ]

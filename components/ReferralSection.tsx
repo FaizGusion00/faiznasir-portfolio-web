@@ -42,7 +42,7 @@ export default function ReferralSection() {
     {
       name: "Mr. Shazril Suhaimi",
       position: "Director",
-      company: "Magiska Design Sdn Bhd",
+      company: "Bestari.io Sdn Bhd",
       email: "syazril@bestari.io", 
       phone: "(+60) 19-302 9570",
       rating: 5,

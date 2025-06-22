@@ -367,7 +367,7 @@ export default function ProjectsSection() {
       company: "FGCompany Trading Solutions",
       period: "2024 - Present",
       status: "Active Development",
-      description: "Developed FG-EA Trading, an advanced automated trading platform featuring algorithmic trading strategies, real-time market analysis, and comprehensive portfolio management for forex and cryptocurrency markets.",
+      description: "Developed FG-EA TradingF, an advanced automated trading platform featuring algorithmic trading strategies, real-time market analysis, and comprehensive portfolio management for forex and cryptocurrency markets.",
       technologies: ["Python", "JavaScript", "Trading APIs", "Machine Learning", "WebSocket", "Chart.js"],
       features: [
         "Automated trading algorithms and expert advisors",
