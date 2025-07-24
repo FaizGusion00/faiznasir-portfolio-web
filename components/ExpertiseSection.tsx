@@ -177,9 +177,6 @@ export default function ExpertiseSection() {
       icon: <SiFigma />,
       technologies: [
         { name: "Figma", icon: <SiFigma /> },
-        { name: "Adobe Photoshop", icon: <FaPalette /> },
-        { name: "Adobe Illustrator", icon: <FaPalette /> },
-        { name: "Adobe Suite", icon: <SiAdobe /> },
         { name: "Canva", icon: <SiCanva /> },
         { name: "Sketch", icon: <SiSketch /> }
       ]
