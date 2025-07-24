@@ -70,11 +70,11 @@ export default function ReferralSection() {
       delay: 0.4
     },
     {
-      name: "Mr. Firman Ahmad",
-      position: "Head Manager",
-      company: "Magiska Design Sdn Bhd",
-      email: "firman@magiska.com",
-      phone: "(+60) 11-5595 7161",
+      name: "Mr. Firman Naufal",
+      position: "Manager",
+      company: "Bestari.io Sdn Bhd",
+      email: "firman@bestari.com",
+      phone: "(+60) 11-5595 7162",
       rating: 5,
       gradient: "from-indigo-600 to-purple-600",
       delay: 0.4
