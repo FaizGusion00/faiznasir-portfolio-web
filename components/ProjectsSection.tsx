@@ -420,6 +420,65 @@ export default function ProjectsSection() {
       gradient: "from-orange-500 to-red-500",
       icon: <FaClipboardList />,
       type: "Tracking & Monitoring System"
+    },
+    {
+      title: "FazzPrint - T-Shirt Printing Company Official Website",
+      subtitle: "Official Web Presence for FazzPrint Sdn Bhd",
+      company: "FazzPrint Sdn Bhd",
+      period: "2023 - Present",
+      status: "Active Development",
+      description: "Developed the official website for FazzPrint Sdn Bhd, a leading T-shirt printing company, to showcase services, portfolio, and enable customer engagement. Built with WordPress for rapid deployment, SEO optimization, and easy content management.",
+      technologies: ["WordPress", "PHP", "Elementor", "SEO", "Web Hosting"],
+      features: [
+        "Professional company profile and service showcase",
+        "Dynamic portfolio and gallery integration",
+        "Contact forms and WhatsApp integration",
+        "SEO-optimized content and fast performance",
+        "Easy content management for non-technical staff"
+      ],
+      gradient: "from-yellow-400 to-orange-500",
+      icon: <FaDesktop />, // Using desktop icon for web presence
+      type: "Company Website"
+    },
+    {
+      title: "FazzTrack - Order Management ERP System for T-Shirt Printing",
+      subtitle: "Comprehensive ERP for FazzPrint Sdn Bhd",
+      company: "FazzPrint Sdn Bhd",
+      period: "2024 - Present",
+      status: "Active Development",
+      description: "Designed and developed FazzTrack, a full-stack ERP system for FazzPrint Sdn Bhd to manage and track T-shirt printing orders, job creation, QR code tracking, payment approvals, and multi-role access. Frontend built with Next.js and Tailwind CSS, backend with ExpressJS and PostgreSQL.",
+      technologies: ["Next.js", "Tailwind CSS", "ExpressJS", "PostgreSQL", "QR Code", "Role Management", "REST API"],
+      features: [
+        "Order and job management with real-time tracking",
+        "QR code generation and scanning for job status",
+        "Payment approval workflows and notifications",
+        "Role-based access for admin, staff, and clients",
+        "Comprehensive reporting and analytics dashboard",
+        "Seamless integration with FazzPrint website"
+      ],
+      gradient: "from-blue-500 to-green-500",
+      icon: <FaClipboardList />, // Using clipboard icon for ERP/order management
+      type: "Order Management ERP"
+    },
+    {
+      title: "FGIslamic Prayer - Muslim Ibadah App",
+      subtitle: "Free Forever Muslim Prayer App (No Ads)",
+      company: "FGCompany Official",
+      period: "2023 - Present",
+      status: "Active Development",
+      description: "Created FGIslamic Prayer, a free and ad-free mobile app for Muslims to track prayer times, receive adzan notifications, and find Qiblat direction. Built with Flutter and powered by Aladhan API, distributed on PlayStore for public benefit with no pricing or ads.",
+      technologies: ["Flutter", "Aladhan API", "Android", "Push Notifications", "Qiblat Compass"],
+      features: [
+        "Accurate prayer times for any location (Aladhan API)",
+        "Adzan notifications and reminders",
+        "Qiblat compass with real-time direction",
+        "Modern, user-friendly UI/UX",
+        "Completely free and ad-free for all users",
+        "Available on Google PlayStore"
+      ],
+      gradient: "from-green-700 to-blue-700",
+      icon: <SiFlutter />, // Using Flutter icon for mobile app
+      type: "Religious Mobile App"
     }
   ]
 
