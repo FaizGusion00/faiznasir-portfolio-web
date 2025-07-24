@@ -40,10 +40,10 @@ export default function ReferralSection() {
       delay: 0
     },
     {
-      name: "Mr. Shazril Suhaimi",
+      name: "Mr. Syazril Suhaimi",
       position: "Director",
-      company: "Bestari.io Sdn Bhd",
-      email: "syazril@bestari.io", 
+      company: "Magiska Design Sdn Bhd",
+      email: "syazril@magiska.com.my", 
       phone: "(+60) 19-302 9570",
       rating: 5,
       gradient: "from-purple-600 to-pink-600",
@@ -73,14 +73,14 @@ export default function ReferralSection() {
       name: "Mr. Firman Naufal",
       position: "Manager",
       company: "Bestari.io Sdn Bhd",
-      email: "firman@bestari.com",
+      email: "firman@bestari.io",
       phone: "(+60) 11-5595 7162",
       rating: 5,
       gradient: "from-indigo-600 to-purple-600",
       delay: 0.4
     },
     {
-      name: "Dr. Kamalia Azma",
+      name: "Prof. Madya Dr. Kamalia Azma",
       position: "Senior Lecturer",
       company: "UiTM Shah Alam",
       email: "kamalia545@uitm.edu.my",
